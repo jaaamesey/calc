@@ -39,8 +39,6 @@ class Home extends React.Component {
         setTimeout(() => {
             this.setState({testVar: "another teeeeeeest"})
         }, 1000);
-        fetch('api/hi')
-            .then(res => res.json())
     }
 
     componentDidUpdate(prevProps, prevState, snapshot) {

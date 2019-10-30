@@ -2,16 +2,16 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 import './index.scss';
-import App from './App';
 import TestPage from './TestPage';
 import * as serviceWorker from './serviceWorker';
 import Home from "./Home";
 import NotFound from "./NotFound";
+import Navbar from "./Navbar";
 
 const routing = (
     <div>
         <Router>
-            <App/>
+            <Navbar test="testt"/>
             <Switch>
                 <Route exact path="/" component={Home}/>
                 <Route path="/home" component={Home}/>
