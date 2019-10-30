@@ -1,13 +1,14 @@
+@import url("https://rsms.me/inter/inter.css");
 body {
   margin: 10px;
   font-family: "Inter", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  transition: all 4s ease;
+    transition: all 4s ease;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
 /*# sourceMappingURL=index.css.map */

@@ -2,16 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="25a6767f-d5da-47f0-a46c-c364c300b2d7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Calculator.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Calculator.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/.sass-cache/ed32bcb0a3362341c4c80bc5c6fb28df7c276717/Calculator.scssc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Calculator.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Calculator.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Calculator.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/__snapshots__/Calculator.test.js.snap" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/NavBar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/.sass-cache/ed32bcb0a3362341c4c80bc5c6fb28df7c276717/index.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/src/.sass-cache/ed32bcb0a3362341c4c80bc5c6fb28df7c276717/index.scssc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Calculator.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Calculator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Calculator.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Calculator.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.scss" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -63,7 +65,20 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Jest.renders without crashing">
+  <component name="RunManager" selected="npm.npm start">
+    <configuration name="adds numbers correctly" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/src/Calculator.test.js" />
+      <test-names>
+        <test-name value="adds numbers correctly" />
+      </test-names>
+      <method v="2" />
+    </configuration>
     <configuration name="renders without crashing" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
@@ -116,9 +131,11 @@
       <item itemvalue="npm.build" />
       <item itemvalue="npm.npm start" />
       <item itemvalue="Jest.renders without crashing" />
+      <item itemvalue="Jest.adds numbers correctly" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Jest.adds numbers correctly" />
         <item itemvalue="Jest.renders without crashing" />
       </list>
     </recent_temporary>
@@ -136,7 +153,7 @@
       <workItem from="1571906141252" duration="3888000" />
       <workItem from="1571926261236" duration="9767000" />
       <workItem from="1572424566837" duration="5262000" />
-      <workItem from="1572442031010" duration="7507000" />
+      <workItem from="1572442031010" duration="15693000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1571934798620</created>
@@ -152,7 +169,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572426293578</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Working buttons">
+      <created>1572449715919</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1572449715919</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -176,7 +200,8 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Initial commit" />
     <MESSAGE value="Removed fetch" />
-    <option name="LAST_COMMIT_MESSAGE" value="Removed fetch" />
+    <MESSAGE value="Working buttons" />
+    <option name="LAST_COMMIT_MESSAGE" value="Working buttons" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
