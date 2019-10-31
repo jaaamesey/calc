@@ -1,9 +1,10 @@
 import React from 'react';
 import 'mathjs';
 import './App.scss';
-import "./Calculator.scss"
+import "./Calculator.scss";
 import {Button, ButtonGroup, Dropdown, FormControl} from "react-bootstrap"
 import {all, create} from "mathjs";
+import insertText from 'insert-text-textarea';
 
 export class Calculator extends React.Component {
     constructor() {
@@ -80,7 +81,7 @@ export class Calculator extends React.Component {
 
     append = (str) => {
         this.textInput.current.focus();
-        document.execCommand('insertText', false, str);
+        insertText(this.textInput.current, str);
     };
 
     onExpressionChanged = (event) => {
@@ -95,7 +96,8 @@ export class Calculator extends React.Component {
         this.textInput.current.focus();
         this.textInput.current.selectionStart = 0;
         this.textInput.current.selectionEnd = this.state.expression.length;
-        document.execCommand('delete');
+        insertText(this.textInput.current, '');
+        this.textInput.current.focus();
     };
 
     moveCursorLeft = () => {
