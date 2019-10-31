@@ -2,19 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="25a6767f-d5da-47f0-a46c-c364c300b2d7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/.sass-cache/ed32bcb0a3362341c4c80bc5c6fb28df7c276717/App.scssc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/.sass-cache/ed32bcb0a3362341c4c80bc5c6fb28df7c276717/Calculator.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/src/.sass-cache/ed32bcb0a3362341c4c80bc5c6fb28df7c276717/Calculator.scssc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/.sass-cache/ed32bcb0a3362341c4c80bc5c6fb28df7c276717/index.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/src/.sass-cache/ed32bcb0a3362341c4c80bc5c6fb28df7c276717/index.scssc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Calculator.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Calculator.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Calculator.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/Calculator.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Calculator.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Calculator.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Calculator.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Calculator.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TestPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/TestPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/NavBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/NavBar.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -154,7 +150,7 @@
       <workItem from="1571906141252" duration="3888000" />
       <workItem from="1571926261236" duration="9767000" />
       <workItem from="1572424566837" duration="5262000" />
-      <workItem from="1572442031010" duration="24099000" />
+      <workItem from="1572442031010" duration="26638000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1571934798620</created>
@@ -191,7 +187,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572496121282</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Now works">
+      <created>1572518540390</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1572518540390</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -218,7 +221,8 @@
     <MESSAGE value="Working buttons" />
     <MESSAGE value="Cursor movement" />
     <MESSAGE value="Inserting text now works on Firefox" />
-    <option name="LAST_COMMIT_MESSAGE" value="Inserting text now works on Firefox" />
+    <MESSAGE value="Now works" />
+    <option name="LAST_COMMIT_MESSAGE" value="Now works" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />

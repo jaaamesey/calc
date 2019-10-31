@@ -4,7 +4,7 @@ import './App.scss';
 
 
 const NavBar = () => (
-    <div>
+    <div className="NavBar">
         <h1>World's Most Useless Calculator App</h1>
         <ul>
             <li><Link to="/">Home</Link></li>

@@ -27,8 +27,10 @@ export class Calculator extends React.Component {
     }
 
     renderCalculator = () =>
-        <div className="calculator">
-            <div className="result">{this.state.result}</div>
+        <div className="Calculator">
+
+            <div className={this.state.result.length < 10 ? "result" : "result result-small"}>{this.state.result}</div>
+            <div className="result-helper-text">{this.getExponentText()}</div>
             <FormControl className="expression" ref={this.textInput} value={this.state.expression}
                          onChange={this.onExpressionChanged}
                          placeholder="" aria-label="Expression"/> <br/>
@@ -95,6 +97,13 @@ export class Calculator extends React.Component {
 
             </div>
         </div>;
+
+    getExponentText = () => {
+        let matches = this.state.result.match(/[\n]*e\s*([^\n\r]*)/);
+        if (matches == null)
+            return "";
+        return matches[0];
+    };
 
     renderButtons = (start, end) => {
         const output = [];
