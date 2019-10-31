@@ -2,7 +2,7 @@ import React from 'react'
 
 class TestPage extends React.Component {
     render() {
-        return <h1>hi lol</h1>
+        return <h1>This is a test page</h1>
     }
 }
 

@@ -1,3 +1,41 @@
-#result {
-  height: 30px;
+.calculator {
+
+  $button-columns: 4;
+  $button-width: 60px;
+  $button-margin: 3px;
+  $calc-width: $button-columns * ($button-width + $button-margin) + 8px;
+
+  width: $calc-width;
+  display: inline-block;
+
+  .result {
+    display: block;
+    height: 62px;
+    text-align: right;
+    font-size: 40px;
+  }
+
+  .expression {
+    display: inline-block;
+    width: $calc-width;
+    text-align: right;
+    margin-bottom: 10px
+  }
+
+  .buttonContainer {
+    display: inline-grid;
+    grid-template-columns: repeat($button-columns, 1fr);
+
+    button {
+      width: $button-width;
+      margin: $button-margin;
+      font-size: 20px;
+    }
+
+    .smallText {
+      font-size: 14px;
+      padding: 0;
+      text-align: center;
+    }
+  }
 }

@@ -1,5 +1,26 @@
-#result {
-    height: 30px;
-}
+.calculator {
+  width: 260px;
+  display: inline-block; }
+  .calculator .result {
+    display: block;
+    height: 62px;
+    text-align: right;
+    font-size: 40px; }
+  .calculator .expression {
+    display: inline-block;
+    width: 260px;
+    text-align: right;
+    margin-bottom: 10px; }
+  .calculator .buttonContainer {
+    display: inline-grid;
+    grid-template-columns: repeat(4, 1fr); }
+    .calculator .buttonContainer button {
+      width: 60px;
+      margin: 3px;
+      font-size: 20px; }
+    .calculator .buttonContainer .smallText {
+      font-size: 14px;
+      padding: 0;
+      text-align: center; }
 
 /*# sourceMappingURL=Calculator.css.map */

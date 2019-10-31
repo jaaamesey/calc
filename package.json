@@ -8,6 +8,7 @@
     "insert-text-textarea": "^1.0.3",
     "mathjs": "^6.2.3",
     "react": "^16.11.0",
+    "react-app-polyfill": "^1.0.4",
     "react-bootstrap": "^1.0.0-beta.14",
     "react-dom": "^16.11.0",
     "react-router-dom": "^5.1.2",
@@ -28,12 +29,14 @@
     "production": [
       ">0.2%",
       "not dead",
-      "not op_mini all"
+      "not op_mini all",
+      "ie >= 9"
     ],
     "development": [
       "last 1 chrome version",
       "last 1 firefox version",
-      "last 1 safari version"
+      "last 1 safari version",
+      "ie >= 9"
     ]
   },
   "devDependencies": {
