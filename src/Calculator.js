@@ -129,20 +129,22 @@ export class Calculator extends React.Component {
         const functions = ["abs", "factorial", "log", "log2", "log10"];
         const trigFunctions = ["sin", "cos", "tan", "sec", "csc", "cot"];
         const constants = ["pi", "tau", "e", "phi", "i", "deg"];
-        output.push(<p>Functions</p>);
+        output.push(<p key="functions">Functions</p>);
         for (let f of functions) {
-            output.push(<span className="defaultLink" onClick={this.bindAppend(f + '(')}>{f} </span>);
+            output.push(<span className="defaultLink" key={f} onClick={this.bindAppend(f + '(')}>{f} </span>);
         }
-        output.push(<br/>);
+        output.push(<br key="brk1"/>);
         for (let f of trigFunctions) {
-            output.push(<span className="defaultLink" onClick={this.bindAppend(f + '(')}>{f} </span>);
-            output.push(<span className="defaultLink" onClick={this.bindAppend(f + 'h(')}>{f}h </span>);
-            output.push(<span className="defaultLink" onClick={this.bindAppend('a' + f + '(')}>a{f} </span>);
-            output.push(<span className="defaultLink" onClick={this.bindAppend('a' + f + 'h(')}>a{f}h </span>);
+            output.push(<span className="defaultLink" key={f} onClick={this.bindAppend(f + '(')}>{f} </span>);
+            output.push(<span className="defaultLink" key={f + '2'} onClick={this.bindAppend(f + 'h(')}>{f}h </span>);
+            output.push(<span className="defaultLink" key={f + '3'}
+                              onClick={this.bindAppend('a' + f + '(')}>a{f} </span>);
+            output.push(<span className="defaultLink" key={f + '4'}
+                              onClick={this.bindAppend('a' + f + 'h(')}>a{f}h </span>);
         }
-        output.push(<p><br/>Constants</p>);
+        output.push(<p key="constants"><br/>Constants</p>);
         for (let c of constants) {
-            output.push(<span className="defaultLink" onClick={this.bindAppend(c)}>{c} </span>);
+            output.push(<span className="defaultLink" key={c} onClick={this.bindAppend(c)}>{c} </span>);
         }
         return output;
     };
