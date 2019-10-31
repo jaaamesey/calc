@@ -9,18 +9,18 @@
     text-align: right;
     font-size: 40px;
     overflow-x: auto;
-    overflow-y: hidden;
+  overflow-y: hidden;
 }
 
-.Calculator .result-small {
+.Calculator .resultSmall {
     line-height: 84px;
-    font-size: 24px;
+  font-size: 24px;
 }
 
-.Calculator .result-helper-text {
+.Calculator .resultHelperText {
     position: absolute;
     text-align: left;
-    transform: translateX(270px) translateY(-30px);
+  transform: translateX(270px) translateY(-30px);
 }
 
 .Calculator .expression {
@@ -28,6 +28,26 @@
     width: 260px;
     text-align: right;
     margin-bottom: 10px; }
+
+.Calculator .accordionHeader {
+  height: 30px;
+  bottom: 30px;
+  line-height: 0;
+  margin-bottom: auto !important;
+}
+
+.Calculator .accordionHeader:hover {
+  cursor: pointer;
+}
+
+.Calculator .defaultLink {
+  color: deepskyblue !important;
+}
+
+.Calculator .defaultLink:hover {
+  color: deepskyblue !important;
+  cursor: pointer !important;
+}
 
 .Calculator .buttonContainer {
     display: inline-grid;

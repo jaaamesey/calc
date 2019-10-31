@@ -19,12 +19,12 @@
 
   }
 
-  .result-small {
+  .resultSmall {
     line-height: 84px;
     font-size: 24px;
   }
 
-  .result-helper-text {
+  .resultHelperText {
     position: absolute;
     text-align: left;
     transform: translateX($calc-width + 10px) translateY(-30px);
@@ -35,6 +35,27 @@
     width: $calc-width;
     text-align: right;
     margin-bottom: 10px
+  }
+
+  .accordionHeader {
+    height: 30px;
+    bottom: 30px;
+    line-height: 0;
+    margin-bottom: auto !important;
+  }
+
+  .accordionHeader:hover {
+    cursor: pointer;
+  }
+
+
+  .defaultLink {
+    color: deepskyblue !important;
+  }
+
+  .defaultLink:hover {
+    color: deepskyblue !important;
+    cursor: pointer !important;
   }
 
   .buttonContainer {
@@ -52,5 +73,6 @@
       padding: 0;
       text-align: center;
     }
+
   }
 }

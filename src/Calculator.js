@@ -2,7 +2,7 @@ import React from 'react';
 import 'mathjs';
 import './App.scss';
 import "./Calculator.scss";
-import {Button, FormControl} from "react-bootstrap"
+import {Accordion, Button, Card, FormControl} from "react-bootstrap"
 import {all, create} from "mathjs";
 import insertText from 'insert-text-textarea';
 
@@ -28,12 +28,23 @@ export class Calculator extends React.Component {
 
     renderCalculator = () =>
         <div className="Calculator">
-
-            <div className={this.state.result.length < 10 ? "result" : "result result-small"}>{this.state.result}</div>
-            <div className="result-helper-text">{this.getExponentText()}</div>
+            <div className={this.state.result.length < 10 ? "result" : "result resultSmall"}>{this.state.result}</div>
+            <div className="resultHelperText">{this.getExponentText()}</div>
             <FormControl className="expression" ref={this.textInput} value={this.state.expression}
                          onChange={this.onExpressionChanged}
                          placeholder="" aria-label="Expression"/> <br/>
+            <Accordion>
+                <Card>
+                    <Accordion.Toggle className="accordionHeader" as={Card.Header} eventKey="0">
+                        Extra stuff
+                    </Accordion.Toggle>
+                    <Accordion.Collapse eventKey="0">
+                        <Card.Body>
+                            {this.renderExtraFunctions()}
+                        </Card.Body>
+                    </Accordion.Collapse>
+                </Card>
+            </Accordion>
             <div className="buttonContainer">
                 <Button onClick={this.moveCursorLeft} variant="secondary">
                     {'<'}
@@ -99,7 +110,7 @@ export class Calculator extends React.Component {
         </div>;
 
     getExponentText = () => {
-        let matches = this.state.result.match(/[\n]*e\s*([^\n\r]*)/);
+        let matches = this.state.result.match(/[\n]*e([+-])\s*([^\n\r]*)/);
         if (matches == null)
             return "";
         return matches[0];
@@ -109,6 +120,29 @@ export class Calculator extends React.Component {
         const output = [];
         for (let i = start; i < end + 1; i++) {
             output.push(<Button key={"button_" + i} onClick={this.bindAppend(i)} variant="secondary"> {i} </Button>);
+        }
+        return output;
+    };
+
+    renderExtraFunctions = () => {
+        const output = [];
+        const functions = ["abs", "factorial", "log", "log2", "log10"];
+        const trigFunctions = ["sin", "cos", "tan", "sec", "csc", "cot"];
+        const constants = ["pi", "tau", "e", "phi", "i", "deg"];
+        output.push(<p>Functions</p>);
+        for (let f of functions) {
+            output.push(<span className="defaultLink" onClick={this.bindAppend(f + '(')}>{f} </span>);
+        }
+        output.push(<br/>);
+        for (let f of trigFunctions) {
+            output.push(<span className="defaultLink" onClick={this.bindAppend(f + '(')}>{f} </span>);
+            output.push(<span className="defaultLink" onClick={this.bindAppend(f + 'h(')}>{f}h </span>);
+            output.push(<span className="defaultLink" onClick={this.bindAppend('a' + f + '(')}>a{f} </span>);
+            output.push(<span className="defaultLink" onClick={this.bindAppend('a' + f + 'h(')}>a{f}h </span>);
+        }
+        output.push(<p><br/>Constants</p>);
+        for (let c of constants) {
+            output.push(<span className="defaultLink" onClick={this.bindAppend(c)}>{c} </span>);
         }
         return output;
     };
@@ -176,7 +210,8 @@ export class Calculator extends React.Component {
         this.textInput.current.selectionStart = this.textInput.current.selectionEnd;
     };
 
-    tryEnumerate(exp) {
+    tryEnumerate(exp, iteration = 0) {
+        iteration++;
         exp = exp.trim();
         if (exp === "")
             return "";
@@ -190,6 +225,19 @@ export class Calculator extends React.Component {
 
             return result.toString();
         } catch (err) {
+            if (iteration < 2) {
+                const numOpenParentheses = (exp.match(/\(/g) || []).length;
+                const numClosedParentheses = (exp.match(/\)/g) || []).length;
+                const parenthesesToAdd = numOpenParentheses - numClosedParentheses;
+                if (parenthesesToAdd > 0) {
+                    let parentheses = "";
+                    for (let i = 0; i < parenthesesToAdd; i++) {
+                        parentheses += ")";
+                    }
+                    return this.tryEnumerate(exp + parentheses, iteration);
+                }
+            }
+
             return "ERROR";
         }
     }

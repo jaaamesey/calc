@@ -9,10 +9,7 @@ class Home extends React.Component {
         this.state = ({testVar: "fffffff"});
     }
 
-    getRandom = () => (Math.random());
-
     render() {
-        console.log(this.props);
         return (
             <div className="App">
                 <Calculator/>
@@ -27,12 +24,6 @@ class Home extends React.Component {
             this.setState({testVar: "another teeeeeeest"})
         }, 1000);
     }
-
-    componentDidUpdate(prevProps, prevState, snapshot) {
-
-
-    }
-
 
 }
 
