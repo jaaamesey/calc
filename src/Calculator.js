@@ -31,7 +31,7 @@ export class Calculator extends React.Component {
             <div className={this.state.result.length < 10 ? "result" : "result resultSmall"}>{this.state.result}</div>
             <div className="resultHelperText">{this.getExponentText()}</div>
             <FormControl className="expression" ref={this.textInput} value={this.state.expression}
-                         onChange={this.onExpressionChanged}
+                         onChange={this.onExpressionChanged.bind(this)}
                          placeholder="" aria-label="Expression"/> <br/>
             <Accordion>
                 <Card>
@@ -156,14 +156,16 @@ export class Calculator extends React.Component {
     append = (str) => {
         this.textInput.current.focus();
         insertText(this.textInput.current, str);
+        // This is really stupid, but Firefox simply refuses to call any onChange event if the keyboard wasn't involved.
+        this.onExpressionChanged();
     };
 
     bindAppend = (str) => {
         return this.append.bind(this, str);
     };
 
-    onExpressionChanged = (event) => {
-        let expression = event.target.value.replace(/\s+/g, '');
+    onExpressionChanged = () => {
+        let expression = this.textInput.current.value.replace(/\s+/g, '');
         this.setState({
             expression: expression,
             result: this.tryEnumerate(expression)
@@ -175,7 +177,8 @@ export class Calculator extends React.Component {
         this.textInput.current.selectionStart = 0;
         this.textInput.current.selectionEnd = this.state.expression.length;
         insertText(this.textInput.current, '');
-        this.textInput.current.focus();
+        // This is really stupid, but Firefox simply refuses to call any onChange event if the keyboard wasn't involved.
+        this.onExpressionChanged();
     };
 
     delete = () => {
@@ -185,7 +188,8 @@ export class Calculator extends React.Component {
             this.textInput.current.selectionStart = this.textInput.current.selectionEnd - 1;
         }
         insertText(this.textInput.current, '');
-        this.textInput.current.focus();
+        // This is really stupid, but Firefox simply refuses to call any onChange event if the keyboard wasn't involved.
+        this.onExpressionChanged();
     };
 
     undo = () => {
