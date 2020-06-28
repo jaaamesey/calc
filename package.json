@@ -1,5 +1,6 @@
 {
-  "name": "react-test-project",
+  "homepage": "http://jaaamesey.github.io/calc",
+  "name": "calc",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
