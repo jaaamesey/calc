@@ -15,7 +15,7 @@ const routing = (
             <NavBar/>
             <Switch>
                 <Route exact path="/" component={Home}/>
-                <Route path="/test" component={TestPage}/>
+                <Route path="/whatisthis" component={TestPage}/>
                 <Route component={NotFound}/>
             </Switch>
         </Router>
