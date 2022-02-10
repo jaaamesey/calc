@@ -44,7 +44,7 @@
     "fibers": "^4.0.2",
     "gh-pages": "^2.1.1",
     "jest": "^24.9.0",
-    "node-sass": "^4.13.0",
+    "node-sass": "^7.0.0",
     "postcss-loader": "^3.0.0",
     "react-test-renderer": "^16.11.0",
     "sass": "^1.23.1",
